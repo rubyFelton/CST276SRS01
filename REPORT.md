@@ -2,7 +2,7 @@
 
 Weather Station Observer
 
-Name: <Not your Pokemon Class ID>
+Name: Ruby Felton
 
 Previous Partner Name:
 
