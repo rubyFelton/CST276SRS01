@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include <iomanip>
-#include "station.h"
+//#include "station.h"
 #include "current.h"
 
 namespace WeatherViewer

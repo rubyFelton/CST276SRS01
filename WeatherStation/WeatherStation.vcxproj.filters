@@ -21,6 +21,21 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="humidity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pressure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="record.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="station.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="temperature.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -29,5 +44,23 @@
     <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="humidity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pressure.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="record.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="station.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="temperature.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

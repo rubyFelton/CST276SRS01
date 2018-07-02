@@ -45,5 +45,18 @@ Specification:
 
     - Be sure to follow all course guidelines, especially submission of main.cpp, REPORT.md, and README.md files.  
 
+concrete subject
+inherits from abstract subject
+weather station 
 
+concrete observer
+inherits from abstract observer
+statistics 
+current
+
+abstract observer
+viewer
+
+abstract subject
+subject 
 ###
