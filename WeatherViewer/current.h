@@ -2,10 +2,10 @@
 #define WEATHER_VIEWER_CURRENT_H
 
 #include <ostream>
-
+//
 namespace WeatherViewer
 {
-    class Current
+    class Current //inherit from class you will wwrite viewer
     {
         friend std::ostream& operator<<(std::ostream& os, Current const& current);
 

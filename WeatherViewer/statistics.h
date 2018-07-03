@@ -4,14 +4,14 @@
 #include <ostream>
 #include <chrono>
 
-namespace WeatherStation
+namespace WeatherStation 
 {
     class Station;
 }
 
 namespace WeatherViewer
 {
-    class Statistics
+    class Statistics //inherit from viewer
     {
         friend std::ostream& operator<<(std::ostream& os, Statistics const& statistics);
 

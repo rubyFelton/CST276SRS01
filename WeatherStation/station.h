@@ -10,7 +10,7 @@
 
 namespace WeatherStation
 {
-    class Station // TODO: Make this a ConcreteSubject.
+    class Station // TODO: Make this a ConcreteSubject by adding inheritance from subjest class you write.
     {
     private:
         std::vector<WeatherStation::Record> history_{};

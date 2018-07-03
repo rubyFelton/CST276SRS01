@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include <cassert>
 #include <limits>
-#include "gsl.h"
+//#include "gsl.h"
 #include "temperature.h"
 #include "humidity.h"
 #include "pressure.h"
