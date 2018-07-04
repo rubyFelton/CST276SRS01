@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="abstractStation.h" />
     <ClInclude Include="humidity.h" />
     <ClInclude Include="pressure.h" />
     <ClInclude Include="record.h" />

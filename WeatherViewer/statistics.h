@@ -3,7 +3,7 @@
 
 #include <ostream>
 #include <chrono>
-
+#include "abstractViewer.h"
 namespace WeatherStation 
 {
     class Station;
@@ -11,7 +11,7 @@ namespace WeatherStation
 
 namespace WeatherViewer
 {
-    class Statistics //inherit from viewer
+    class Statistics : public AbstractViewer
     {
         friend std::ostream& operator<<(std::ostream& os, Statistics const& statistics);
 
