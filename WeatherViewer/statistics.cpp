@@ -1,7 +1,8 @@
 #include "stdafx.h"
 #include <iomanip>
-//#include "station.h"
+#include "../WeatherStation/station.h"
 #include "statistics.h"
+#include "theWeatherStation.h"
 
 namespace WeatherViewer
 {
@@ -24,13 +25,19 @@ namespace WeatherViewer
         return os;
     }
 
-    Statistics::Statistics(WeatherStation::Station const &station): station_{ station }
-    {
+    Statistics::Statistics()
+	{
+		getStation().Attach(*this);
     }
 
-    WeatherStation::Station const& Statistics::getStation() const
+    WeatherStation::Station & Statistics::getStation()
     {
-        return station_;
+        return TheWeatherStation::getWeatherStation();
+    }   
+	
+	WeatherStation::Station const& Statistics::getStation() const
+    {
+        return TheWeatherStation::getWeatherStation();
     }
 
     std::chrono::system_clock::time_point Statistics::getBegin() const

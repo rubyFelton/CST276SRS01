@@ -1,7 +1,10 @@
 #pragma once
 
-class AbstractViewer
+namespace WeatherViewer
 {
-public:	
-	virtual void Update() = 0;
-};
+	class AbstractViewer
+	{
+	public:
+		virtual void Update() = 0;
+	};
+}

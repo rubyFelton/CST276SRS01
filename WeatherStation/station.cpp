@@ -1,13 +1,12 @@
 #include "stdafx.h"
 #include <cassert>
 #include <limits>
-//#include "gsl.h"
+#include "gsl.h"
 #include "temperature.h"
 #include "humidity.h"
 #include "pressure.h"
 #include "station.h"
-//#include "statistics.h"
-//#include "current.h"
+#include "../WeatherViewer/statistics.h"
 
 namespace WeatherStation
 {
@@ -25,16 +24,6 @@ namespace WeatherStation
 
         history_.emplace_back(record);
     }
-
-    //WeatherViewer::Statistics Station::getWeatherViewerStatistics() const
-    //{
-    //    return weather_viewer_statistics_;
-    //}
-
-    //WeatherViewer::Current Station::getWeatherViewerCurrent() const
-    //{
-    //    return weather_viewer_current_;
-    //}
 
     Temperature Station::getTemperature() const
     {

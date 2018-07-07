@@ -7,10 +7,11 @@
 #include "humidity.h"
 #include "pressure.h"
 #include "record.h"
+#include "abstractStation.h"
 
 namespace WeatherStation
 {
-    class Station // TODO: Make this a ConcreteSubject by adding inheritance from subjest class you write.
+    class Station : public AbstractStation
     {
     private:
         std::vector<WeatherStation::Record> history_{};
@@ -20,6 +21,10 @@ namespace WeatherStation
 
     public:
         Station() noexcept;
+
+		std::vector<std::reference_wrapper<WeatherViewer::AbstractViewer> > observers;
+
+
 		//replace with collect of weatherviewers and attach to the subject
         //WeatherViewer::Statistics getWeatherViewerStatistics() const;
         //WeatherViewer::Current getWeatherViewerCurrent() const;

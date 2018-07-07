@@ -3,7 +3,7 @@
 #include <random>
 #include <chrono>
 #include <thread>
-//#include "station.h"
+#include "../WeatherStation/station.h"
 
 int main()
 {
@@ -21,8 +21,8 @@ int main()
     }
 
     std::cout <<
-        "Average: " << weather_station.getWeatherViewerStatistics() << "\n" <<
-        "Current: " << weather_station.getWeatherViewerCurrent()    << "\n" <<
+        "Average: " << ""<< "\n" <<
+        "Current: " << ""  << "\n" <<
         std::endl;
 
     return 0;

@@ -152,6 +152,7 @@
     <ClInclude Include="statistics.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="theWeatherStation.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="current.cpp" />
@@ -163,6 +164,12 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="theWeatherStation.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WeatherStation\WeatherStation.vcxproj">
+      <Project>{3143a22a-5363-4f22-8915-12cc2d34d357}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

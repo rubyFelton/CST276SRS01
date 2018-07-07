@@ -1,7 +1,8 @@
 #include "stdafx.h"
 #include <iomanip>
-//#include "station.h"
 #include "current.h"
+#include "abstractViewer.h"
+#include "theWeatherStation.h"
 
 namespace WeatherViewer
 {
@@ -21,12 +22,19 @@ namespace WeatherViewer
         return os;
     }
 
-    Current::Current(WeatherStation::Station const &station): station_{ station }
+    Current::Current()
     {
+		getStation().Attach(*this);
     }
 
     WeatherStation::Station const& Current::getStation() const
     {
-        return station_;
-    }
+		return TheWeatherStation::getWeatherStation();
+	}   
+	
+	WeatherStation::Station & Current::getStation()
+    {
+		return TheWeatherStation::getWeatherStation();
+	}
+
 }

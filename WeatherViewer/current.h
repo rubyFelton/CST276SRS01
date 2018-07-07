@@ -3,6 +3,7 @@
 
 #include <ostream>
 #include "abstractViewer.h"
+#include "../WeatherStation/station.h"
 
 namespace WeatherViewer
 {
@@ -11,12 +12,12 @@ namespace WeatherViewer
         friend std::ostream& operator<<(std::ostream& os, Current const& current);
 
     private:
-        WeatherStation::Station const& station_;
 
     public:
-        explicit Current(WeatherStation::Station const& station);
+        explicit Current();
 
         WeatherStation::Station const& getStation() const;
+        WeatherStation::Station & getStation();
     };
 }
 
