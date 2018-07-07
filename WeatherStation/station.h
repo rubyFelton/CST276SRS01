@@ -1,5 +1,8 @@
-#ifndef WEATHER_STATION_STATION_H
+#ifndef WEATHER_STATION_STATION_H  __declspec(dllexport)
 #define WEATHER_STATION_STATION_H
+#else
+#define WEATHER_STATION_STATION_H __declspec(dllimport)
+#endif
 
 #include <vector>
 #include <chrono>
@@ -40,5 +43,3 @@ namespace WeatherStation
         void measure();
     };
 }
-
-#endif // WEATHER_STATION_STATION_H
