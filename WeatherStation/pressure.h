@@ -2,10 +2,11 @@
 #define WEATHER_STATION_PRESSURE_H
 
 #include <limits>
+#include "weatherStationDLL.h"
 
 namespace WeatherStation
 {
-    class Pressure
+    class WEATHERSTATION_API Pressure
     {
     public:
         using value_type = double; // inches Hg (29.9213 in Hg == 1 atmosphere)

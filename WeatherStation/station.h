@@ -1,8 +1,4 @@
-#ifdef WEATHERSTATION_EXPORTS
-#define WEATHERSTATION __declspec(dllexport)
-#else
-#define WEATHERSTATION __declspec(dllimport)
-#endif
+#pragma once
 
 #include <vector>
 #include <chrono>
@@ -11,13 +7,14 @@
 #include "pressure.h"
 #include "record.h"
 #include "abstractStation.h"
+#include "weatherStationDLL.h"
 
 namespace WeatherStation
 {
-    class Station : public AbstractStation
+    class WEATHERSTATION_API Station : public AbstractStation
     {
     private:
-        std::vector<WeatherStation::Record> history_{};
+        std::vector<std::reference_wrapper<WeatherStation::Record> > history_{};
 
         //WeatherViewer::Current weather_viewer_current_;       // TODO: Remove this ConcreteObserver.
         //WeatherViewer::Statistics weather_viewer_statistics_; // TODO: Remove this ConcreteObserver.

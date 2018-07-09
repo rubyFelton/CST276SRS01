@@ -54,10 +54,10 @@ namespace WeatherStation
         auto period_start{ t0 };
         for (auto const& weather_record: history_)
         {
-            auto const record_timepoint{ weather_record.getTimepoint() };
+            auto const record_timepoint{ weather_record.get().getTimepoint() };
             if (record_timepoint >= period_start && record_timepoint < t1)
             {
-                auto const value{ weather_record.getTemperature() };
+                auto const value{ weather_record.get().getTemperature() };
 
                 if (value.is_good())
                 {
@@ -105,10 +105,10 @@ namespace WeatherStation
         auto period_start{ t0 };
         for (auto const& weather_record: history_)
         {
-            auto const record_timepoint{ weather_record.getTimepoint() };
+            auto const record_timepoint{ weather_record.get().getTimepoint() };
             if (record_timepoint >= period_start && record_timepoint < t1)
             {
-                auto const value{ weather_record.getHumidity() };
+                auto const value{ weather_record.get().getHumidity() };
 
                 if (value.is_good())
                 {
@@ -156,10 +156,10 @@ namespace WeatherStation
         auto period_start{ t0 };
         for (auto const& weather_record: history_)
         {
-            auto const record_timepoint{ weather_record.getTimepoint() };
+            auto const record_timepoint{ weather_record.get().getTimepoint() };
             if (record_timepoint >= period_start && record_timepoint < t1)
             {
-                auto const value{ weather_record.getPressure() };
+                auto const value{ weather_record.get().getPressure() };
 
                 if (value.is_good())
                 {

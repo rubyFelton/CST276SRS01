@@ -5,10 +5,11 @@
 #include "temperature.h"
 #include "humidity.h"
 #include "pressure.h"
+#include "weatherStationDLL.h"
 
 namespace WeatherStation
 {
-    class Record
+    class WEATHERSTATION_API Record
     {
     private:
         std::chrono::system_clock::time_point const timepoint_{ std::chrono::system_clock::now() };
