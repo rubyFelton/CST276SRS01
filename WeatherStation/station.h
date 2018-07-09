@@ -1,7 +1,7 @@
-#ifndef WEATHER_STATION_STATION_H  __declspec(dllexport)
-#define WEATHER_STATION_STATION_H
+#ifdef WEATHERSTATION_EXPORTS
+#define WEATHERSTATION __declspec(dllexport)
 #else
-#define WEATHER_STATION_STATION_H __declspec(dllimport)
+#define WEATHERSTATION __declspec(dllimport)
 #endif
 
 #include <vector>

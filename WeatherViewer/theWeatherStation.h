@@ -1,6 +1,4 @@
 #pragma once
-#include "../WeatherStation/temperature.h"
-#include "../WeatherStation/station.h"
 
 class TheWeatherStation
 {
