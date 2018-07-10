@@ -30,7 +30,12 @@ namespace WeatherViewer
 		getStation().Attach(*this);
     }
 
-    WeatherStation::Station & Statistics::getStation()
+	void Statistics::Update()
+	{
+
+	}
+
+	WeatherStation::Station & Statistics::getStation()
     {
         return TheWeatherStation::getWeatherStation();
     }   

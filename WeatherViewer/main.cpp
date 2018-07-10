@@ -4,10 +4,13 @@
 #include <chrono>
 #include <thread>
 #include "../WeatherStation/station.h"
+#include "theWeatherStation.h"
+#include "statistics.h"
+#include "current.h"
 
 int main()
 {
-    WeatherStation::Station weather_station;
+    WeatherStation::Station& weather_station = TheWeatherStation::getWeatherStation();
 
 
     std::random_device rd;
@@ -22,8 +25,9 @@ int main()
     }
 
     std::cout <<
-        "Average: " << ""<< "\n" <<
-        "Current: " << ""  << "\n" <<
+        "Average: " << "" << "\n" <<
+        "Current: " << "" << "\n" <<
+
         std::endl;
 
     return 0;

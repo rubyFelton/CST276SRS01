@@ -16,26 +16,19 @@ namespace WeatherStation
     private:
         std::vector<std::reference_wrapper<WeatherStation::Record> > history_{};
 
-        //WeatherViewer::Current weather_viewer_current_;       // TODO: Remove this ConcreteObserver.
-        //WeatherViewer::Statistics weather_viewer_statistics_; // TODO: Remove this ConcreteObserver.
-
     public:
         Station() noexcept;
 
 		std::vector<std::reference_wrapper<WeatherViewer::AbstractViewer> > observers;
 
+        Temperature getTemperature();
+        Humidity getHumidity();
+        Pressure getPressure();
 
-		//replace with collect of weatherviewers and attach to the subject
-        //WeatherViewer::Statistics getWeatherViewerStatistics() const;
-        //WeatherViewer::Current getWeatherViewerCurrent() const;
-
-        Temperature getTemperature() const;
-        Humidity getHumidity() const;
-        Pressure getPressure() const;
-
-        Temperature getMeanTemperature(std::chrono::system_clock::time_point const t0, std::chrono::system_clock::time_point const t1) const;
-        Humidity getMeanHumidity(std::chrono::system_clock::time_point const t0, std::chrono::system_clock::time_point const t1) const;
-        Pressure getMeanPressure(std::chrono::system_clock::time_point const t0, std::chrono::system_clock::time_point const t1) const;
+        Temperature getMeanTemperature(std::chrono::system_clock::time_point const t0, std::chrono::system_clock::time_point const t1);
+        Humidity getMeanHumidity(std::chrono::system_clock::time_point const t0, std::chrono::system_clock::time_point const t1);
+        Pressure getMeanPressure(std::chrono::system_clock::time_point const t0, std::chrono::system_clock::time_point const t1);
+		Record getLastRecord();
 
         void measure();
     };

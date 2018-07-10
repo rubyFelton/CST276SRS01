@@ -6,9 +6,9 @@
 
 namespace WeatherViewer
 {
-    std::ostream& operator<<(std::ostream& os, WeatherViewer::Current const& current)
+    std::ostream& operator<<(std::ostream& os, WeatherViewer::Current & current)
     {
-        auto const& station{ current.getStation() };
+        auto & station{ current.getStation() };
 
         auto const temperature{ station.getTemperature() };
         auto const humidity{ station.getHumidity() };
@@ -24,10 +24,21 @@ namespace WeatherViewer
 
     Current::Current()
     {
+		temp_ = ;
+		humidity_ = lastRecord.getHumidity();
+		pressure_ = lastRecord.getPressure();
 		getStation().Attach(*this);
     }
 
-    WeatherStation::Station const& Current::getStation() const
+	void Current::Update()
+	{
+		auto lastRecord = getStation().getLastRecord();
+		temp_ = lastRecord.getTemperature();
+		humidity_ = lastRecord.getHumidity();
+		pressure_ = lastRecord.getPressure();
+	}
+
+	WeatherStation::Station const& Current::getStation() const
     {
 		return TheWeatherStation::getWeatherStation();
 	}   
@@ -36,5 +47,6 @@ namespace WeatherViewer
     {
 		return TheWeatherStation::getWeatherStation();
 	}
+
 
 }
