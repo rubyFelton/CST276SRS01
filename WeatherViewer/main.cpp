@@ -25,8 +25,8 @@ int main()
     }
 
     std::cout <<
-        "Average: " << "" << "\n" <<
-        "Current: " << "" << "\n" <<
+        "Average: " << weather_station.getWeatherViewerStatistics() << "\n" <<
+        "Current: " << weather_station.getWeatherViewerCurrent() << "\n" <<
 
         std::endl;
 

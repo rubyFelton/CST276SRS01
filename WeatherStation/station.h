@@ -8,6 +8,8 @@
 #include "record.h"
 #include "abstractStation.h"
 #include "weatherStationDLL.h"
+#include "../WeatherViewer/statistics.h"
+#include "../WeatherViewer/current.h"
 
 namespace WeatherStation
 {
@@ -18,8 +20,10 @@ namespace WeatherStation
 
     public:
         Station() noexcept;
+		WeatherViewer::Current getWeatherViewerCurrent() const;
+		WeatherViewer::Statistics getWeatherViewerStatistics() const;
 
-		std::vector<std::reference_wrapper<WeatherViewer::AbstractViewer> > observers;
+	    std::vector<std::reference_wrapper<WeatherViewer::AbstractViewer> > observers;
 
         Temperature getTemperature();
         Humidity getHumidity();

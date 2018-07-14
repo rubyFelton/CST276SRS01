@@ -14,6 +14,16 @@ namespace WeatherStation
 	{
 	}
 
+	WeatherViewer::Statistics Station::getWeatherViewerStatistics() const
+	{
+		return weather_viewer_statistics_;
+	}
+
+	WeatherViewer::Current Station::getWeatherViewerCurrent() const
+	{
+		return weather_viewer_current_;
+	}
+
 	void Station::measure()
 	{
 		Temperature const temperature{getTemperature()};
@@ -38,19 +48,22 @@ namespace WeatherStation
 
 	Temperature Station::getTemperature()
 	{
-		auto const result{Temperature(Temperature::default_value)}; // TODO: Create a mock temperature reading.
+		auto temp = rand() %100;
+		auto const result{Temperature(temp)}; // TODO: Create a mock temperature reading.
 		return result;
 	}
 
 	Humidity Station::getHumidity()
 	{
-		auto const result{Humidity(Humidity::default_value)}; // TODO: Create a mock humidity reading.
+		auto temp = rand() % 100;
+		auto const result{Humidity(temp)}; // TODO: Create a mock humidity reading.
 		return result;
 	}
 
 	Pressure Station::getPressure()
 	{
-		auto const result{Pressure(Pressure::default_value)}; // TODO: Create a mock pressure reading.
+		auto temp = rand() % 100;
+		auto const result{Pressure(temp)}; // TODO: Create a mock pressure reading.
 		return result;
 	}
 
