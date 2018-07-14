@@ -14,16 +14,6 @@ namespace WeatherStation
 	{
 	}
 
-	WeatherViewer::Statistics Station::getWeatherViewerStatistics() const
-	{
-		return weather_viewer_statistics_;
-	}
-
-	WeatherViewer::Current Station::getWeatherViewerCurrent() const
-	{
-		return weather_viewer_current_;
-	}
-
 	void Station::measure()
 	{
 		Temperature const temperature{getTemperature()};

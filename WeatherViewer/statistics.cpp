@@ -6,12 +6,12 @@
 
 namespace WeatherViewer
 {
-    std::ostream& operator<<(std::ostream& os, WeatherViewer::Statistics const& statistics)
+    std::ostream& operator<<(std::ostream& os, WeatherViewer::Statistics & statistics)
     {
-        auto const& station{ statistics.getStation() };
+        auto & station{ statistics.getStation() };
 
-        auto const& begin{ statistics.getBegin() };
-        auto const& now{ std::chrono::system_clock::now() };
+        auto & begin{ statistics.getBegin() };
+        auto & now{ std::chrono::system_clock::now() };
 
         auto const meanTemperature{ station.getMeanTemperature(begin, now) };
         auto const meanHumidity{ station.getMeanHumidity(begin, now) };
@@ -27,12 +27,18 @@ namespace WeatherViewer
 
     Statistics::Statistics()
 	{
+		temp_ = getStation().getPressure();;
+		humidity_ = getStation().getPressure();;
+		pressure_ = getStation().getPressure();
 		getStation().Attach(*this);
     }
 
 	void Statistics::Update()
 	{
-
+		auto lastRecord = getStation().getLastRecord();
+		temp_ = lastRecord.getTemperature();
+		humidity_ = lastRecord.getHumidity();
+		pressure_ = lastRecord.getPressure();
 	}
 
 	WeatherStation::Station & Statistics::getStation()

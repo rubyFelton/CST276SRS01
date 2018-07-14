@@ -20,8 +20,6 @@ namespace WeatherStation
 
     public:
         Station() noexcept;
-		WeatherViewer::Current getWeatherViewerCurrent() const;
-		WeatherViewer::Statistics getWeatherViewerStatistics() const;
 
 	    std::vector<std::reference_wrapper<WeatherViewer::AbstractViewer> > observers;
 

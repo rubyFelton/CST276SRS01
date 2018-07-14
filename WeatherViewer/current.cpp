@@ -24,9 +24,9 @@ namespace WeatherViewer
 
     Current::Current()
     {
-		temp_ = ;
-		humidity_ = lastRecord.getHumidity();
-		pressure_ = lastRecord.getPressure();
+		temp_ = getStation().getPressure();;
+		humidity_ = getStation().getPressure();;
+		pressure_ = getStation().getPressure();
 		getStation().Attach(*this);
     }
 

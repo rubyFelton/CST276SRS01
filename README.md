@@ -59,4 +59,10 @@ viewer
 
 abstract subject
 subject 
+
+My main project has build errors and will not work so it has not been possible to see if my dll works.
+I am sending it anyway as a good faith effort but it will likely be best to use 
+your own. The current errors I believe have to do with the overloading of the = opporator. The way it works is each
+viewers attach in the constructor to a semi singlton of station. inside my measure function is where notify is called which kicks off the update.
+I did not get it to work for statistics it is only updating the current.
 ###

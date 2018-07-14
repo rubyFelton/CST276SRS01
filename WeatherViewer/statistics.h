@@ -14,7 +14,7 @@ namespace WeatherViewer
 {
     class Statistics : public AbstractViewer
     {
-        friend std::ostream& operator<<(std::ostream& os, Statistics const& statistics);
+        friend std::ostream& operator<<(std::ostream& os, Statistics & statistics);
 		WeatherStation::Temperature temp_;
 		WeatherStation::Humidity humidity_;
 		WeatherStation::Pressure pressure_;

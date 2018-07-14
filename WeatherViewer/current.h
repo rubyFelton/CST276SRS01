@@ -19,7 +19,7 @@ namespace WeatherViewer
 
     public:
         explicit Current();
-		void Update();
+		void Update() override;
         WeatherStation::Station const& getStation() const;
         WeatherStation::Station & getStation();
     };
